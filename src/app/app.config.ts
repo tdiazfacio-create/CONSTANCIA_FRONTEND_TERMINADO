@@ -12,7 +12,7 @@ import { PonenteService } from './layout/ponente.service';
 
 import { TokenInterceptor } from './layout/token.interceptor'; 
 import { routes } from './app.routes';
- 
+ import { provideNativeDateAdapter } from '@angular/material/core';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -27,6 +27,7 @@ export const appConfig: ApplicationConfig = {
     },
 
     provideAnimations(), 
+    provideNativeDateAdapter(),
     
     AlumnoService,
     ConferenceService,

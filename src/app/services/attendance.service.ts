@@ -14,7 +14,7 @@ export class AttendanceService {
   constructor(private http: HttpClient) { }
 
   requestAttendance(data: { control_number: string, conference_id: number }): Observable<any> {
-    return this.http.post(`${this.apiUrl}/request`, data);
+    return this.http.post(`${this.apiUrl}/attendance/request`, data);
   }
 
   confirmAttendance(token: string): Observable<any> {

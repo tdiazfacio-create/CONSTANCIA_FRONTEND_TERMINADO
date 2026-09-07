@@ -157,7 +157,7 @@ export class AsistenciaComponent implements OnInit, AfterViewInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
 
-        this.docenteService.deleteAsistencia(asistencia.ID_ASISTENCIA).subscribe({
+        this.docenteService.deleteAsistencia(asistencia.id_asistencia).subscribe({
           next: () => {
 
             this.mostrarNotificacion('Asistencia eliminada correctamente', 'success');
